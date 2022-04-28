@@ -1,0 +1,231 @@
+/* VARIABLES */
+:root
+{
+    --yellow: #ffb734;
+}
+/* BODY */
+body
+{
+    background-image: url("assets/bg.jpg");
+    background-image: linear-gradient(120deg, rgb(110, 52, 75, 0.985), rgba(71, 59, 133, 0.985)), url("assets/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+}
+::-webkit-scrollbar 
+{
+    width: 0;
+    background: transparent;
+}
+.margin
+{
+    margin: 5%;
+}
+/* NAVIGATION */
+.menu a
+{
+    float: left;
+    margin-bottom: 2%;
+    padding: 0.5% 2.5%;
+    background-color: var(--yellow);
+    color: rgb(100, 100, 100);
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1vw;
+    text-decoration: none;
+}
+.topNavBar
+{
+    position: relative;
+    overflow: hidden;
+    visibility: hidden;
+    margin-bottom: 4%;
+    height: 0;
+    width: 100%;
+}
+.topNavBar a
+{
+    display: block;
+    float: left;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    width: 19%;
+    padding: 1% 0%;
+    background-color: var(--yellow);
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    font-style: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5vw;
+}
+/* TACOS */
+.tacos
+{
+    position: relative;
+    width: 100%;
+    float: left;
+}
+.tacos .bg
+{
+    position: absolute;
+    background-image: url("assets/taco_wall.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 70%;
+    height: 500px;
+    margin-right: 1%;
+}
+.tacos .bg div
+{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+.tacos .bg div > *
+{
+    float: none;
+    width: max-content;
+    padding: 2.5% 2.5%;
+    background-color: var(--yellow);
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    font-style: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.tacos .bg2
+{
+    position: absolute;
+    margin-right: 1%;
+    width: 28%;
+    height: 500px;
+    right: 0;
+}
+.tacos .div1
+{
+    position: absolute;
+    top: 0;
+    height: 48%;
+    width: 100%;
+    background-color: var(--yellow);
+    color: #333;
+    text-align: center;
+    font-size: 5vw;
+    font-style: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+}
+.tacos .bg2 .div2
+{
+    position: absolute;
+    bottom: 0;
+    height: 48%;
+    width: 100%;
+    background-color: var(--yellow);
+    color: #333;
+    text-align: center;
+    font-size: 5vw;
+    font-style: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+}
+.tacos .bg2 div a
+{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+.tacos .bg2 div a p
+{
+    font-size: 1vw;
+}
+/* +2160PX */
+@media screen and (min-width:2160px)
+{
+    .tacos .bg2 div a
+    {
+        font-size: 3vw;
+    }
+}
+/* -700PX */
+@media screen and (max-width:700px)
+{
+    /* NAVIGATION */
+    .menu a
+    {
+        font-size: 1.5vw;
+    }
+    .topNavBar a
+    {
+        width: 49%;
+        padding: 2.5% 0%;
+        font-size: 2vw;
+    }
+    /* TACOS */
+    .tacos .bg
+    {
+        width: 100%;
+    }
+    .tacos .bg div h1
+    {
+        font-size: x-large;
+    }
+    .tacos .bg div h3
+    {
+        font-size: large;
+    }
+    .tacos .bg2
+    {
+        position: relative;
+        margin-right: 1%;
+        width: 100%;
+        height: 200px;
+        top: 500px;
+        margin-top: 5%;
+    }
+    .tacos .bg2 .div1
+    {
+        height: 45%;
+        font-size: 10vw;
+    }
+    .tacos .bg2 .div2
+    {
+        height: 45%;
+        font-size: 10vw;
+    }
+    .tacos .bg2 div a
+    {
+        position: unset;
+        top: unset;
+        left: unset;
+    }
+}
+/* -350PX */
+@media screen and (max-width:350px)
+{
+    /* NAVIGATION */
+    .menu a
+    {
+        font-size: 2.5vw;
+    }
+    .topNavBar a
+    {
+        float: none;
+        width: 100%;
+        font-size: 3vw;
+    }
+    /* TACOS */
+    .tacos .bg div h1
+    {
+        font-size: large;
+    }
+    .tacos .bg div h3
+    {
+        font-size: medium;
+    }
+    .tacos .bg2
+    {
+        height: 100px;
+    }
+}
