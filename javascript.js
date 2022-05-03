@@ -5,11 +5,9 @@ function onMenuClick()
     if (navMenu.textContent == "× Menu")
     {
         navMenu.textContent = "☰ Menu";
-        navBar.style.height = "0px";
     }
     else
     {
         navMenu.textContent = "× Menu";
-        navBar.style.height = "auto";
     }
 }
