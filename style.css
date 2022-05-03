@@ -2,15 +2,29 @@
 :root
 {
     --yellow: #ffb734;
+    --dark: #333;
+}
+/* DEFAULTS */
+a
+{
+    padding: 1% 0%;
+    background-color: var(--yellow);
+    color: var(--dark);
+    text-align: center;
+    text-decoration: none;
+    font-size: 2vw;
+    margin-bottom: 2%;
 }
 /* BODY */
 body
 {
-    background-image: url("assets/bg.jpg");
     background-image: linear-gradient(120deg, rgb(110, 52, 75, 0.985), rgba(71, 59, 133, 0.985)), url("assets/bg.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     background-attachment: fixed;
+    text-align: center;
+    text-decoration: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 ::-webkit-scrollbar 
 {
@@ -19,213 +33,241 @@ body
 }
 .margin
 {
+    display: flex;
+    flex-direction: column;
     margin: 5%;
 }
 /* NAVIGATION */
-.menu a
+nav
 {
-    float: left;
-    margin-bottom: 2%;
-    padding: 0.5% 2.5%;
-    background-color: var(--yellow);
-    color: rgb(100, 100, 100);
-    text-align: center;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1vw;
-    text-decoration: none;
-}
-.topNavBar
-{
-    position: relative;
-    overflow: hidden;
-    visibility: hidden;
-    margin-bottom: 4%;
-    height: 0;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
-.topNavBar a
+.navMenu
 {
-    display: block;
+    visibility: hidden;
+    height: 0;
+}
+.navMenu a
+{
     float: left;
-    margin-right: 1%;
-    margin-bottom: 1%;
-    width: 19%;
-    padding: 1% 0%;
-    background-color: var(--yellow);
-    color: #333;
-    text-align: center;
-    text-decoration: none;
-    font-style: bold;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0.5% 2.5%;
+    color: rgb(100, 100, 100);
     font-size: 1.5vw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navBar
+{
+    display: flex;
+    flex-direction: row;
+    padding: 1% 0%;
+}
+.navBar a
+{
+    float: left;
+    width: 19%;
+    margin-right: 1%;
 }
 /* TACOS */
 .tacos
 {
-    position: relative;
-    width: 100%;
-    float: left;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2%;
 }
-.tacos .bg
+.tacos .box-1
 {
-    position: absolute;
+    position: relative;
+    margin-right: 1%;
+    width: 75%;
+    height: 50vw;
     background-image: url("assets/taco_wall.webp");
     background-size: cover;
     background-repeat: no-repeat;
-    width: 70%;
-    height: 500px;
-    margin-right: 1%;
 }
-.tacos .bg div
+.tacos .box-1 *
 {
     position: absolute;
+    padding: 0.5% 1.5%;
+    width: max-content;
+    font-size: 3vw;
+    background-color: var(--yellow);
+}
+.tacos .box-1 h1
+{
     top: 30%;
     left: 10%;
 }
-.tacos .bg div > *
+.tacos .box-1 h3
 {
-    float: none;
-    width: max-content;
-    padding: 2.5% 2.5%;
-    background-color: var(--yellow);
-    color: #333;
-    text-decoration: none;
-    text-align: center;
-    font-style: bold;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    top: 40%;
+    left: 10%;
 }
-.tacos .bg2
+.tacos .box-2
 {
-    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
     margin-right: 1%;
-    width: 28%;
-    height: 500px;
-    right: 0;
 }
-.tacos .div1
+.tacos .box-2 div
 {
-    position: absolute;
-    top: 0;
-    height: 48%;
-    width: 100%;
-    background-color: var(--yellow);
-    color: #333;
+    font-size: 2.5vw;
     text-align: center;
-    font-size: 5vw;
-    font-style: bold;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-decoration: none;
-}
-.tacos .bg2 .div2
-{
-    position: absolute;
-    bottom: 0;
-    height: 48%;
-    width: 100%;
     background-color: var(--yellow);
-    color: #333;
-    text-align: center;
-    font-size: 5vw;
-    font-style: bold;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-decoration: none;
 }
-.tacos .bg2 div a
+.tacos .box-2 .div-1
+{
+    flex: 1;
+    margin-bottom: 5%;
+}
+.tacos .box-2 .div-2
+{
+    flex: 1;
+}
+/* FEATURES */
+.features
+{
+    display: flex;
+    flex-direction: column;
+    font-size: 2vw;
+}
+.features h2
+{
+    font-size: 3vw;
+}
+.features .box-1
+{
+    display: flex;
+    flex-direction: row;
+}
+.features .box-1 div
+{
+    margin-right: 1%;
+    margin-bottom: 1%;
+    background-color: aliceblue;
+}
+.features .box-1 div *
+{
+    margin: 5%;
+}
+.features .box-2
+{
+    position: relative;
+    background-color: aliceblue;
+    margin-right: 1%;
+}
+.features .box-2 div
+{
+    margin: 0%;
+    margin-top: 10%;
+    margin-bottom: 15%;
+}
+.features .box-2 .queso
+{
+    width: 60%;
+    height: auto;
+}
+.features .box-2 a
 {
     position: absolute;
-    top: 30%;
-    left: 30%;
+    padding: 1% 2%;
+    bottom: 5%;
+    left: 40%;
 }
-.tacos .bg2 div a p
+/* GRAMS */
+.grams
 {
-    font-size: 1vw;
+
 }
-/* +2160PX */
-@media screen and (min-width:2160px)
+.grams img
 {
-    .tacos .bg2 div a
-    {
-        font-size: 3vw;
-    }
+    margin: 1%;
+    width: 30%;
+    height: auto;
 }
 /* -700PX */
 @media screen and (max-width:700px)
 {
-    /* NAVIGATION */
-    .menu a
+    .margin
     {
-        font-size: 1.5vw;
+        margin: 15%;
     }
-    .topNavBar a
+    /* NAVIGATION */
+    .navMenu
+    {
+        visibility: visible;
+        height: auto;
+    }
+    .navBar
+    {
+        display: unset;
+    }
+    .navBar a
     {
         width: 49%;
-        padding: 2.5% 0%;
+        margin-bottom: 1%;
+        padding: 2% 0%;
         font-size: 2vw;
     }
     /* TACOS */
-    .tacos .bg
+    .tacos
+    {
+        flex-direction: column;
+    }
+    .tacos .box-1
+    {
+        width: auto;
+        margin-bottom: 1%;
+    }
+    .tacos .box-2 .div-1
+    {
+        margin-bottom: 1%;
+    }
+    .tacos .box-2
+    {
+        width: auto;
+    }
+    /* FEATURES */
+    .features .box-1
+    {
+        flex-direction: column;
+    }
+    .features .box-2 div
+    {
+        margin: 20%;
+    }
+    .features .box-2 a
+    {
+        position: absolute;
+        padding: 1% 2%;
+        bottom: 5%;
+        left: 40%;
+    }
+    /* GRAMS */
+    .grams
+    {
+    }
+    .grams img
     {
         width: 100%;
-    }
-    .tacos .bg div h1
-    {
-        font-size: x-large;
-    }
-    .tacos .bg div h3
-    {
-        font-size: large;
-    }
-    .tacos .bg2
-    {
-        position: relative;
-        margin-right: 1%;
-        width: 100%;
-        height: 200px;
-        top: 500px;
-        margin-top: 5%;
-    }
-    .tacos .bg2 .div1
-    {
-        height: 45%;
-        font-size: 10vw;
-    }
-    .tacos .bg2 .div2
-    {
-        height: 45%;
-        font-size: 10vw;
-    }
-    .tacos .bg2 div a
-    {
-        position: unset;
-        top: unset;
-        left: unset;
     }
 }
 /* -350PX */
 @media screen and (max-width:350px)
 {
     /* NAVIGATION */
-    .menu a
+    .navBar
     {
-        font-size: 2.5vw;
+        display: flex;
+        flex-direction: column;
     }
-    .topNavBar a
+    .navBar a
     {
-        float: none;
-        width: 100%;
+        margin-bottom: 1%;
+        padding: 2% 0%;
         font-size: 3vw;
-    }
-    /* TACOS */
-    .tacos .bg div h1
-    {
-        font-size: large;
-    }
-    .tacos .bg div h3
-    {
-        font-size: medium;
-    }
-    .tacos .bg2
-    {
-        height: 100px;
+        width: auto;
     }
 }

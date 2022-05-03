@@ -1,17 +1,15 @@
 function onMenuClick()
 {
-    var element = document.getElementById("mainNavBar");
-    var menu = document.getElementById("menuButton");
-    if (element.style.visibility == "visible")
+    var navMenu = document.getElementById("navMenu");
+    var navBar = document.getElementById("navBar");
+    if (navMenu.textContent == "× Menu")
     {
-        element.style.visibility = "hidden";
-        element.style.height = 0;
-        menu.textContent = "☰ Menu";
+        navMenu.textContent = "☰ Menu";
+        navBar.style.height = "0px";
     }
     else
     {
-        element.style.visibility = "visible";
-        element.style.height = "auto";
-        menu.textContent = "× Menu";
+        navMenu.textContent = "× Menu";
+        navBar.style.height = "auto";
     }
 }
