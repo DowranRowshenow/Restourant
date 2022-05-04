@@ -12,7 +12,7 @@ a
     color: var(--dark);
     text-align: center;
     text-decoration: none;
-    font-size: 2vw;
+    font-size: 1.2vw;
     margin-bottom: 2%;
 }
 /* BODY */
@@ -35,7 +35,7 @@ body
 {
     display: flex;
     flex-direction: column;
-    margin: 5%;
+    margin: 3%;
 }
 /* NAVIGATION */
 nav
@@ -80,8 +80,8 @@ nav
 {
     position: relative;
     margin-right: 1%;
-    width: 75%;
-    height: 50vw;
+    width: 65%;
+    height: 25vw;
     background-image: url("assets/taco_wall.webp");
     background-size: cover;
     background-repeat: no-repeat;
@@ -96,26 +96,39 @@ nav
 }
 .tacos .box-1 h1
 {
+    font-size: 2vw;
     top: 30%;
     left: 10%;
 }
 .tacos .box-1 h3
 {
-    top: 40%;
+    font-size: 1vw;
+    top: 45%;
     left: 10%;
 }
 .tacos .box-2
 {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 35%;
     margin-right: 1%;
 }
 .tacos .box-2 div
 {
-    font-size: 2.5vw;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2vw;
+    color: var(--dark);
     text-align: center;
     background-color: var(--yellow);
+}
+.tacos .box-2 div h1
+{
+    margin-bottom: -1%;
+}
+.tacos .box-2 div h2
+{
+    font-size: 1vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .tacos .box-2 .div-1
 {
@@ -131,11 +144,19 @@ nav
 {
     display: flex;
     flex-direction: column;
-    font-size: 2vw;
+    font-size: 0.7vw;
+    color: var(--dark);
+}
+.features h3
+{
+    font-size: 4vw;
 }
 .features h2
 {
-    font-size: 3vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+    color: rgb(82, 82, 82);
 }
 .features .box-1
 {
@@ -150,41 +171,75 @@ nav
 }
 .features .box-1 div *
 {
-    margin: 5%;
+    margin: 2%;
 }
 .features .box-2
 {
     position: relative;
     background-color: aliceblue;
     margin-right: 1%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
 }
 .features .box-2 div
 {
-    margin: 0%;
-    margin-top: 10%;
-    margin-bottom: 15%;
+    margin-top: -3%;
+    text-align: left;
 }
 .features .box-2 .queso
 {
-    width: 60%;
+    margin: 3%;
+    width: 25%;
     height: auto;
 }
 .features .box-2 a
 {
-    position: absolute;
-    padding: 1% 2%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 2% 4%;
     bottom: 5%;
     left: 40%;
 }
 /* GRAMS */
 .grams
 {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.grams .instant
+{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7vw;
+}
+.grams h1
+{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.grams .instant .left
+{
+    background-image: linear-gradient(90deg, rgb(110, 52, 75, 0.0), rgb(255, 196, 0));
+    height: 0.5vw;
+    width: 40%;
+}
+.grams .instant .right
+{
+    background-image: linear-gradient(90deg, rgb(255, 196, 0), rgb(110, 52, 75, 0.0));
+    height: 0.5vw;
+    width: 40%;
 }
 .grams img
 {
-    margin: 1%;
-    width: 30%;
+    margin-bottom: 1%;
+    margin-right: 1%;
+    width: 15%;
     height: auto;
 }
 /* -700PX */
@@ -218,8 +273,17 @@ nav
     }
     .tacos .box-1
     {
+        height: 40vw;
         width: auto;
         margin-bottom: 1%;
+    }
+    .tacos .box-1 h1
+    {
+        top: 30%;
+    }
+    .tacos .box-1 h3
+    {
+        top: 40%;
     }
     .tacos .box-2 .div-1
     {
@@ -234,21 +298,16 @@ nav
     {
         flex-direction: column;
     }
+    .features .box-2
+    {
+        flex-direction: column;
+    }
     .features .box-2 div
     {
-        margin: 20%;
-    }
-    .features .box-2 a
-    {
-        position: absolute;
-        padding: 1% 2%;
-        bottom: 5%;
-        left: 40%;
+        margin-bottom: 5%;
+        text-align: center;
     }
     /* GRAMS */
-    .grams
-    {
-    }
     .grams img
     {
         width: 100%;
